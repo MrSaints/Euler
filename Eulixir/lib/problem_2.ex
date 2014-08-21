@@ -1,12 +1,10 @@
 defmodule Problem_2 do
     defp fib(limit) do
         Stream.unfold {0, 1},
-            fn {a, b} ->
-                if a > limit do
-                    nil
-                else
-                    {a, {b, a + b}}
-                end
+            fn {a, _} when a > limit ->
+                nil
+            {a, b} ->
+                {a, {b, a + b}}
             end
     end
 
