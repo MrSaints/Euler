@@ -8,4 +8,8 @@ defmodule Eulixir_Test do
     test "Problem 2" do
         assert Problem_2.answer === 4_613_732
     end
+
+    test "Problem 3" do
+        assert Problem_3.answer === 6_857
+    end
 end
