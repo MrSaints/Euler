@@ -12,4 +12,8 @@ defmodule Eulixir_Test do
     test "Problem 3" do
         assert Problem_3.answer === 6_857
     end
+
+    test "Problem 5" do
+        assert Problem_5.answer === 232_792_560
+    end
 end
