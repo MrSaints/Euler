@@ -28,4 +28,8 @@ defmodule Eulixir_Test do
     test "Problem 7" do
         assert Problem_7.answer == 104_743
     end
+
+    test "Problem 8" do
+        assert Problem_8.answer == 23514624000
+    end
 end
