@@ -48,5 +48,4 @@ defmodule Problem_8 do
     def answer do
         largest_adjacent_products 13
     end
-
 end
