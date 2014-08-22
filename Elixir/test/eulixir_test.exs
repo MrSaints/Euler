@@ -22,14 +22,14 @@ defmodule Eulixir_Test do
     end
 
     test "Problem 6" do
-        assert Problem_6.answer == 25_164_150
+        assert Problem_6.answer === 25_164_150
     end
 
     test "Problem 7" do
-        assert Problem_7.answer == 104_743
+        assert Problem_7.answer === 104_743
     end
 
     test "Problem 8" do
-        assert Problem_8.answer == 23_514_624_000
+        assert Problem_8.answer === 23_514_624_000
     end
 end
