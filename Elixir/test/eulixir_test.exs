@@ -30,6 +30,6 @@ defmodule Eulixir_Test do
     end
 
     test "Problem 8" do
-        assert Problem_8.answer == 23514624000
+        assert Problem_8.answer == 23_514_624_000
     end
 end
