@@ -19,7 +19,7 @@ defmodule Problem_7 do
 
 	# 6k ± 1 <= √n method (naive)
 	defp naive(x, increment, limit) do
-		naive(x, increment + 6, limit)
+		naive x, increment + 6, limit
 	end
 
 	defp is_prime(x) when x < 4 and x > 1 do
@@ -32,7 +32,7 @@ defmodule Problem_7 do
 
 	defp is_prime(x) do
 		limit = round(:math.sqrt(x))
-		naive(x, 5, limit)
+		naive x, 5, limit
 	end
 
 	defp nth_prime(n, position, found) when n === found do
@@ -41,17 +41,17 @@ defmodule Problem_7 do
 
 	defp nth_prime(n, position, found) do
 		if is_prime(position) do
-			nth_prime(n, position + 1, found + 1)
+			nth_prime n, position + 1, found + 1
 		else
-			nth_prime(n, position + 1, found)
+			nth_prime n, position + 1, found
 		end
 	end
 
 	defp nth_prime(n) do
-		nth_prime(n, 5, 2)
+		nth_prime n, 5, 2
 	end
 
 	def answer do
-		nth_prime(10_001)
+		nth_prime 10_001
 	end
 end
