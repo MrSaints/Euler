@@ -31,8 +31,7 @@ defmodule Problem_7 do
     end
 
     defp is_prime(x) do
-        limit = round(:math.sqrt(x))
-        naive x, 5, limit
+        naive x, 5, round(:math.sqrt(x))
     end
 
     defp nth_prime(n, position, found) when n === found do
