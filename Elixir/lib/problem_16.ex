@@ -1,12 +1,13 @@
 defmodule Problem_16 do
-    defp power_digit_sum(i, pow) do
-        # TODO: Convert string to int in the reduction function.
-        # (Saves an unnecessary loop)
-        # Process: power -> convert float to int -> convert to string -> explode -> map to int -> sum
-        :math.pow(i, pow) |> round |> Integer.to_string |> String.codepoints |> Enum.map(&String.to_integer/1) |> Enum.sum
+    # TODO: Convert string to int in the reduction function.
+    # (Saves an unnecessary loop)
+    # Process: convert to string -> explode -> map to int -> sum
+    def digit_sum(digit) do
+        Integer.to_string(digit) |> String.codepoints |> Enum.map(&String.to_integer/1) |> Enum.sum
     end
 
     def answer do
-        power_digit_sum 2, 1000
+        # Process: power via erlang -> convert float to int -> sum of digits
+        :math.pow(2, 1000) |> round |> digit_sum
     end
 end
