@@ -1,10 +1,10 @@
 # O(N ^ N)
 defmodule Problem_25 do
-    def pow(_, y, acc, i) when i === y do
+    defp pow(_, y, acc, i) when i === y do
         acc
     end
 
-    def pow(x, y, acc, i) do
+    defp pow(x, y, acc, i) do
         pow x, y, acc * x, i + 1
     end
 
