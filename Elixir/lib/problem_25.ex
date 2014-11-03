@@ -1,15 +1,24 @@
-# O(N ^ N)
 defmodule Problem_25 do
-    defp pow(_, y, acc, i) when i === y do
-        acc
+    # Exponentiation by squaring
+    def pow(x, n) when n < 0 do
+        pow 1/x, -n
     end
 
-    defp pow(x, y, acc, i) do
-        pow x, y, acc * x, i + 1
+    def pow(_, n) when n === 0 do
+        1
     end
 
-    def pow(x, y) do
-        pow x, y, x, 1
+    def pow(x, n) when n === 1 do
+        x
+    end
+
+    # O(log2n)
+    def pow(x, n) when rem(n, 2) === 0 do
+        pow x*x, round(n/2)
+    end
+
+    def pow(x, n) do
+        x * pow x*x, round((n-1)/2)
     end
 
     def answer do
