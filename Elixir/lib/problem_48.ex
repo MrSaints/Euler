@@ -1,4 +1,4 @@
-defmodule Problem_25 do
+defmodule Problem_48 do
     # Exponentiation by squaring
     def pow(x, n) when n < 0 do
         pow 1/x, -n
