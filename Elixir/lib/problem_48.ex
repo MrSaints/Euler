@@ -1,24 +1,21 @@
 defmodule Problem_48 do
-    # Exponentiation by squaring
-    def pow(x, n) when n < 0 do
-        pow 1/x, -n
-    end
+    use Bitwise
 
-    def pow(_, n) when n === 0 do
+    def pow(_, 0) do
         1
     end
 
-    def pow(x, n) when n === 1 do
-        x
+    def pow(a, 1) do
+        a
     end
 
-    # O(log2n)
-    def pow(x, n) when rem(n, 2) === 0 do
-        pow x*x, round(n/2)
+    def pow(a, n) when band(n, 1) === 0 do
+        tmp = pow(a, n >>> 1) # /2
+        tmp * tmp
     end
 
-    def pow(x, n) do
-        x * pow x*x, round((n-1)/2)
+    def pow(a, n) do
+        a * pow(a, n - 1)
     end
 
     def answer do
