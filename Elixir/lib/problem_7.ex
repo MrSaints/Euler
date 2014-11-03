@@ -22,15 +22,15 @@ defmodule Problem_7 do
         naive x, increment + 6, limit
     end
 
-    defp is_prime(x) when x < 4 and x > 1 do
+    def is_prime(x) when x < 4 and x > 1 do
         true
     end
 
-    defp is_prime(x) when rem(x, 2) === 0 or rem(x, 3) === 0 do
+    def is_prime(x) when rem(x, 2) === 0 or rem(x, 3) === 0 do
         false
     end
 
-    defp is_prime(x) do
+    def is_prime(x) do
         naive x, 5, round(:math.sqrt(x))
     end
 
