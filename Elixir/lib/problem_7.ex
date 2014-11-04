@@ -26,7 +26,7 @@ defmodule Problem_7 do
         true
     end
 
-    def is_prime(x) when rem(x, 2) === 0 or rem(x, 3) === 0 do
+    def is_prime(x) when rem(x, 2) === 0 or rem(x, 3) === 0 or x === 1 do
         false
     end
 
