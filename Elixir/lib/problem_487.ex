@@ -3,11 +3,11 @@ defmodule Problem_487 do
     use Bitwise
 
     # Faulhaber's formula
-    defp f_pyramid(n) do
+    def f_pyramid(n) do
         (2 * (Problem_25.pow(n, 3)) + (3 * (n * n)) + n) / 6
     end
 
-    defp f_quad(n) do
+    def f_quad(n) do
         ((6 * Problem_25.pow(n, 5)) + (15 * Problem_25.pow(n, 4)) + 
             (10 * Problem_25.pow(n, 3)) - n) / 30
     end
